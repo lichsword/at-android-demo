@@ -9,26 +9,36 @@
     tools:context="com.at.android.demo.MainActivity" >
 
     <TextView
-        android:id="@+id/tv_weather"
+        android:id="@+id/tv_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_date" />
+
+    <TextView
+        android:id="@+id/tv_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_weather" />
 
     <TextView
         android:id="@+id/tv_degree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_hello" />
+        android:layout_below="@+id/tv_wind" />
 
     <ImageView
         android:id="@+id/imgv_day"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_hello" />
+        android:layout_height="wrap_content" />
 
     <ImageView
         android:id="@+id/imgv_night"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_hello" />
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>

@@ -2,6 +2,7 @@ package com.at.android.demo.section.asyncloadweather;
 
 import com.at.android.demo.R;
 import com.at.common.android.AtbAdapter;
+import com.at.comon.third.baidu.WeatherData;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,9 +15,6 @@ public class WeatherListAdapter extends AtbAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 
-		append(String.format("天气:%s, 温度:%s, 风力:%s, 白天图像:%s, 夜晚图像:%s", item.date, item.temperature, item.wind,
-				item.dayPictureUrl, item.nightPictureUrl));
-
 		View view = convertView;
 		ViewHolder viewHolder = null;
 
@@ -24,27 +22,41 @@ public class WeatherListAdapter extends AtbAdapter {
 
 		if (null == view) {
 			view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_weather, null);
-			viewHolder = new ViewHolder(view, dataType);
+			viewHolder = new ViewHolder(view);
+			view.setTag(viewHolder);
 		} else {
-
+			view = convertView;
+			viewHolder = (ViewHolder) convertView.getTag();
 		}
 
-		return null;
+		viewHolder.fill(dataType);
+
+		return view;
 	}
 
 	class ViewHolder {
+		TextView tv_date;
 		TextView tv_weather;
 		TextView tv_degree;
 		TextView tv_wind;
 		ImageView imgv_day;
 		ImageView imgv_night;
 
-		public ViewHolder(View view, ATDataType dataType) {
-
+		public ViewHolder(View view) {
+			tv_date = (TextView) view.findViewById(R.id.tv_date);
+			tv_weather = (TextView) view.findViewById(R.id.tv_weather);
+			tv_degree = (TextView) view.findViewById(R.id.tv_degree);
+			tv_wind = (TextView) view.findViewById(R.id.tv_wind);
+			imgv_day = (ImageView) view.findViewById(R.id.imgv_day);
+			imgv_night = (ImageView) view.findViewById(R.id.imgv_night);
 		}
 
-		public void fill() {
-
+		public void fill(ATDataType dataType) {
+			WeatherData weatherData = (WeatherData) dataType.data;
+			tv_weather.setText("天气:" + weatherData.weather);
+			tv_degree.setText("温度:" + weatherData.temperature);
+			tv_wind.setText("风力:" + weatherData.wind);
+			tv_date.setText(weatherData.date);
 		}
 	}
 }
