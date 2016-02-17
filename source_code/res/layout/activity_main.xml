@@ -29,4 +29,22 @@
         android:layout_toRightOf="@+id/tv_github"
         android:text="@string/git_url" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_github" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btn_asyncloaddata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_asyncloaddata" />
+        </LinearLayout>
+    </ScrollView>
+
 </RelativeLayout>
