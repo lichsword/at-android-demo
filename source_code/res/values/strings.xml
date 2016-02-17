@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">at-android-demo</string>
+    <string name="hello_world">欢迎使用由lichsword维护的android demo例程。交流QQ群：468543631</string>
+    <string name="action_settings">Settings</string>
+    <string name="label_git_host">Git源代码</string>
+    <string name="git_url">https://github.com/lichsword/at-android-demo.git</string>
+
+</resources>
