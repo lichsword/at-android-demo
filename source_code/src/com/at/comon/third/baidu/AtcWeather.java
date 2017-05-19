@@ -44,11 +44,16 @@ public class AtcWeather extends AtbController {
 				if (null != callback) {
 					callback.onBegin();
 				} // end if
-				
+
 				ATHttpClient httpClient = new ATHttpClient();
 				ATHttpParameter[] parameter = new ATHttpParameter[] { new ATHttpParameter("location", "武汉"),
 						new ATHttpParameter("output", "json"), new ATHttpParameter("ak", "BDEEPt05z9g4YAR0c6629KYk") };
-
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				
 				try {
 					ATHttpResponse response = httpClient.get("http://api.map.baidu.com/telematics/v3/weather",
 							parameter);

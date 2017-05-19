@@ -4,39 +4,39 @@
 
     <item
         android:drawable="@drawable/img_loading_01"
-        android:duration="50">
+        android:duration="80">
     </item>
     <item
         android:drawable="@drawable/img_loading_02"
-        android:duration="50">
+        android:duration="80">
     </item>
     <item
         android:drawable="@drawable/img_loading_03"
-        android:duration="50">
+        android:duration="80">
     </item>
     <item
         android:drawable="@drawable/img_loading_04"
-        android:duration="50">
+        android:duration="80">
     </item>
     <item
         android:drawable="@drawable/img_loading_05"
-        android:duration="50">
+        android:duration="80">
     </item>
     <item
         android:drawable="@drawable/img_loading_06"
-        android:duration="50">
+        android:duration="80">
     </item>
     <item
         android:drawable="@drawable/img_loading_07"
-        android:duration="50">
+        android:duration="80">
     </item>
     <item
         android:drawable="@drawable/img_loading_08"
-        android:duration="50">
+        android:duration="80">
     </item>
     <item
         android:drawable="@drawable/img_loading_09"
-        android:duration="50">
+        android:duration="80">
     </item>
 
 </animation-list>
